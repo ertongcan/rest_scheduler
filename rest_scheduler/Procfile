@@ -1,2 +1,2 @@
 web: gunicorn rest_scheduler.wsgi
-worker: celery -A backend worker -l info -c 4
+worker: celery -A backend worker -B -l info -c 4
