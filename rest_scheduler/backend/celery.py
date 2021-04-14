@@ -1,4 +1,4 @@
-import celery import Celery
+from celery import Celery
 
 import os
 
