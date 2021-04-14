@@ -1,1 +1,1 @@
-web: gunicorn perdoo_case_study.wsgi
+web: gunicorn rest_scheduler.wsgi
