@@ -5,6 +5,9 @@ import requests
 def process_request(url, method, **kwargs):
 	#task_arguments = kwargs
 	
-	#r = requests.request(method, url, headers= headers, params = params, timeout=timeout)
-	#r.encoding = 'ISO-8859-1'
-	return url, method, kwargs
+	try:
+		resp = requests.request(method, url, headers= headers, params = params, timeout=timeout)
+		return resp.text
+	except as Exception e:
+		return resp.raise_for_status()
+	
