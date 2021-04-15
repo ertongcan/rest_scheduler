@@ -8,9 +8,9 @@ def process_request(url, method, **kwargs):
 		resp = requests.request(method, url)
 		
 		if not resp.ok:
-			return resp.raise_for_status()
+			resp.raise_for_status()
 		else:
 			return resp.json()
 	except Exception as e:
-		return resp.raise_for_status()
+		esp.raise_for_status()
 	
