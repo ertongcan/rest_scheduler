@@ -131,10 +131,10 @@ django_heroku.settings(locals())
 
 CELERY_RESULT_BACKEND = 'django-db'
 
-CACHE_BACKEND = 'django-cache'
+CELERY_CACHE_BACKEND = 'django-cache'
 
-BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers:DatabaseScheduler'
 
-BROKER_URL = os.environ['REDIS_URL']
+CELERY_BROKER_URL = os.environ['REDIS_URL']
 
 CELERY_CONN_MAX_AGE = 0
