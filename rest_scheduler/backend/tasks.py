@@ -13,6 +13,10 @@ def process_request(url, method, **kwargs):
 		raise Exception(f"Request Error: {err}")
 	except requests.exceptions.HTTPError as errh:
 		raise Exception(f"Http Error: {errh}")
+	except requests.exceptions.URLRequired as erru:
+		raise Exception(f"URL Error: {erru}")
+	except requests.exceptions.TooManyRedirects as errtmr:
+		raise Exception(f"Too many redirects")
 	except requests.exceptions.ConnectionError as errc:
 		raise Exception(f"Error Connecting: {errc}")
 	except requests.exceptions.Timeout as errt:
