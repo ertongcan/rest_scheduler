@@ -7,6 +7,6 @@ def process_request(url, method, **kwargs):
 	try:
 		resp = requests.request(method, url)
 		return resp.text
-	except as Exception e:
+	except Exception as e:
 		return resp.raise_for_status()
 	
