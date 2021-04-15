@@ -1,6 +1,6 @@
 from celery import shared_task
 import requests
-from .request_helper import prepare_request_params
+from .helper import prepare_request_params
 
 @shared_task
 def process_request(url, method, **kwargs):
