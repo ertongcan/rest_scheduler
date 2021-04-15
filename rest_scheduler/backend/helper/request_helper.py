@@ -6,21 +6,21 @@ def prepare_request_params(arguments: dict):
 		params = arguments["params"]
 	
 	if "data" in arguments.keys():
-		params = arguments["data"]
+		data = arguments["data"]
 		
 	if "json" in arguments.keys():
-		params = arguments["json"]
+		json = arguments["json"]
 		
 	if "headers" in arguments.keys():
-		params = arguments["headers"]
+		headers = arguments["headers"]
 		
 	if "auth" in arguments.keys():
-		params = arguments["auth"]
+		auth = arguments["auth"]
 	
 	if "timeout" in arguments.keys():
-		params = arguments["timeout"]
+		timeout = arguments["timeout"]
 	
 	if "auth" in arguments.keys():
-		params = arguments["auth"]
+		auth = arguments["auth"]
 		
 	return params, data, json, headers, auth, timeout, auth
