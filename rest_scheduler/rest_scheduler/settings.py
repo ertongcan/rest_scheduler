@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 import django_heroku
 import os
 from pathlib import Path
-
+from django.contrib import admin
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'django_celery_beat',
 	'backend'
 ]
-
+admin.site.unregister(CrontabSchedule)
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -131,6 +131,5 @@ django_heroku.settings(locals())
 
 
 CELERY_BROKER_URL=os.environ['REDIS_URL']
-#CELERY_RESULT_BACKEND='db+postgresql://ekoexsuklgioqd:25b88e9cbc9e790817071769167d7e5bf8154acb57f3972b3b0d9f484709e61c@ec2-34-233-0-64.compute-1.amazonaws.com:5432/d8m0j5mj2fdmpi'
 CELERY_RESULT_BACKEND='django-db'
 CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers.DatabaseScheduler'
