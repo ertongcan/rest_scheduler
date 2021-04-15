@@ -5,7 +5,7 @@
 In my opinion, unit testing strategy would be a best fit for this kind of app because integration test's scope would not be that big because we only specify a rest request and
 schedule it and monitor it from results view page. On the other side by writing unit tests (django unit case feature by creating tests folder and specify each component of the system like test_models.py),
 
-we will be able to have a coverage to our source code and test;
+we will be able to have a coverage of our source code and test;
 
 - client login to the system
 - testing celery models which are assertion of creating periodic task which includes api request arguments and celery results data (success with result and failures with reasons) by test_models.py
