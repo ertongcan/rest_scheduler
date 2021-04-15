@@ -10,12 +10,12 @@ def process_request(url, method, **kwargs):
 		resp.raise_for_status()
 		result = resp.json()
 	except requests.exceptions.RequestException as err:
-		raise(f"Request Error: {err}")
+		raise Exception(f"Request Error: {err}")
 	except requests.exceptions.HTTPError as errh:
-		raise(f"Http Error: {errh}")
+		raise Exception(f"Http Error: {errh}")
 	except requests.exceptions.ConnectionError as errc:
-		raise(f"Error Connecting: {errc}")
+		raise Exception(f"Error Connecting: {errc}")
 	except requests.exceptions.Timeout as errt:
-		raise(f"Timeout Error: {errt}") 
+		raise Exception(f"Timeout Error: {errt}") 
 		
 	return result
