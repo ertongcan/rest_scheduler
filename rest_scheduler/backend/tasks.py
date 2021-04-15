@@ -12,7 +12,7 @@ def process_request(**kwargs):
 	
 	result = None
 	try:
-		resp = requests.request(method, url, data = data, json = json, headers = headers, params = params, timeout = timeout, auth=auth)
+		resp = requests.request(kwargs["method"], kwargs["url"], data = data, json = json, headers = headers, params = params, timeout = timeout, auth=auth)
 		resp.raise_for_status()
 		result = resp.json()
 	except requests.exceptions.RequestException as err:
