@@ -7,7 +7,7 @@ def process_request(url, method, **kwargs):
 	result = None
 	try:
 		resp = requests.request(method, url)
-		r.raise_for_status()
+		resp.raise_for_status()
 		result = resp.json()
 	except requests.exceptions.RequestException as err:
 		result = f"OOps: Something Else {err}"
