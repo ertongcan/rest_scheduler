@@ -20,6 +20,8 @@ def process_request(url, method, **kwargs):
 	except requests.exceptions.ConnectionError as errc:
 		raise Exception(f"Error Connecting: {errc}")
 	except requests.exceptions.Timeout as errt:
-		raise Exception(f"Timeout Error: {errt}") 
+		raise Exception(f"Timeout Error: {errt}")
+	except ValueError as v_err # in case of response is not in json format
+		result = resp.text()
 		
 	return result
