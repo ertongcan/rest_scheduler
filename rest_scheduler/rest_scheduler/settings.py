@@ -128,3 +128,8 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 django_heroku.settings(locals())
+
+
+CELERY_BROKER_URL=os.environ['REDIS_URL']
+CELERY_RESULT_BACKEND='db+postgresql://ekoexsuklgioqd:25b88e9cbc9e790817071769167d7e5bf8154acb57f3972b3b0d9f484709e61c@ec2-34-233-0-64.compute-1.amazonaws.com:5432/d8m0j5mj2fdmpi'
+CELERY_BEAT_SCHEDULER = 'django_celery_beat.schedulers.DatabaseScheduler'
