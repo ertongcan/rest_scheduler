@@ -12,5 +12,5 @@ def process_request(url, method, **kwargs):
 		else:
 			return resp.json()
 	except Exception as e:
-		esp.raise_for_status()
+		resp.raise_for_status()
 	
