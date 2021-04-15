@@ -5,6 +5,9 @@ from .helper import prepare_request_params
 @shared_task
 def process_request(url, method, **kwargs):
 	
+	if method is None or url is None:
+		raise Exception("Please provide url and method for a valid API request!!!")
+	
 	params, data, json, headers, auth, timeout, auth = prepare_request_params(kwargs)
 	
 	result = None
