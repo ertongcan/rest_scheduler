@@ -6,7 +6,7 @@ def process_request(url, method, **kwargs):
 
 	try:
 		resp = requests.request(method, url)
-		return resp.text
+		return resp.json()
 	except Exception as e:
 		return resp.raise_for_status()
 	
