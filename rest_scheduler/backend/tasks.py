@@ -5,10 +5,11 @@ from .helper import prepare_request_params
 @shared_task
 def process_request(url, method, **kwargs):
 	
-	prepare_request_params()
+	params, data, json, headers, auth, timeout, auth = prepare_request_params(kwargs)
+	
 	result = None
 	try:
-		resp = requests.request(method, url, data = None, json = kwargs["data"], headers = kwargs["headers"], params = None, timeout = None)
+		resp = requests.request(method, url, params = params, data = data, json = json, headers = headers, params = params, timeout = timeout, auth=auth)
 		resp.raise_for_status()
 		result = resp.json()
 	except requests.exceptions.RequestException as err:
