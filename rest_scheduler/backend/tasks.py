@@ -4,7 +4,7 @@ import requests
 @shared_task
 def process_request(url, method, **kwargs):
 	
-	header, timeout, 
+ 
 	result = None
 	try:
 		resp = requests.request(method, url, data = kwargs["data"], headers = kwargs["header"])
