@@ -1,8 +1,13 @@
-from django.test import SimpleTestCase
+import unittest
+from django.test import Client
 
+class SimpleTest(unittest.TestCase):
+    def setUp(self):
+        # Every test needs a client.
+        self.client = Client()
 
-class ViewsTestCase(SimpleTestCase):
-    def test_index_loads_properly(self):
-        """The index page loads properly"""
-        response = self.client.get('https://perdoo-case-study.herokuapp.com/admin')
+    def test_details(self):
+        response = self.client.post('/login/', {'name': 'perdo', 'passwd': 'perdo'})
+
+        # Check that the response is 200 OK.
         self.assertEqual(response.status_code, 200)
