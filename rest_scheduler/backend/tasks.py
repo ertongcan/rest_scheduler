@@ -7,7 +7,7 @@ def process_request(url, method, **kwargs):
 	header, timeout, 
 	result = None
 	try:
-		resp = requests.request(method, url, data = kwargs["data"])
+		resp = requests.request(method, url, data = kwargs["data"], headers = kwargs["header"])
 		resp.raise_for_status()
 		result = resp.json()
 	except requests.exceptions.RequestException as err:
