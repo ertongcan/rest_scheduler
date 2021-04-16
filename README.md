@@ -1,5 +1,12 @@
 ## rest_scheduler
-rest api scheduler using celery
+rest api scheduler using celery, celery beat and celery results
+
+## Installation instructions
+
+- pip install -r requirements.txt
+- django-admin startproject <PROJECT_NAME>
+- python manage.py startapp <APP_NAME>
+- access admin from <HOST_URL>/admin
 
 ## how to create a periodic task
 
