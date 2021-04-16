@@ -10,8 +10,8 @@ rest api scheduler using celery
 
 Any kind of http request can be specified from task arguments section in periodic task page
 
-. Go To Arguments(Show) section in the periodic task edit/create page
-. Collapse the menu and enjoy your api in keyword arguments section like below examples
+- Go To Arguments(Show) section in the periodic task edit/create page
+- Collapse the menu and enjoy your api in keyword arguments section like below examples
 
 ### Example POST request specification
 
