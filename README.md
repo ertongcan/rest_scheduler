@@ -5,7 +5,7 @@ rest api scheduler using celery
 
 Any kind of http request can be specified from task arguments section in periodic task page
 
-Example POST request specification
+### Example POST request specification
 
 `{ 
 "url" : "https://jsonplaceholder.typicode.com/posts",
@@ -20,7 +20,7 @@ Example POST request specification
   }
 }`
 
-Example GET request specification
+### Example GET request specification
 
 `{ 
 "url" : "https://jsonplaceholder.typicode.com/posts",
@@ -28,4 +28,4 @@ Example GET request specification
 "headers" : {"accept": "application/json"}
 }`
 
-`params, data, json, headers, auth, timeout, auth` request parameters are supported
+> `params, data, json, headers, auth, timeout, auth` request parameters are supported
