@@ -31,5 +31,5 @@ def process_request(**kwargs):
 		result = resp.text
 	except KeyError as k_err:
 		raise Exception(f"Error in arguments: {k_err}")
-		
+
 	return result
