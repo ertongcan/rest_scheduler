@@ -11,7 +11,8 @@ rest api scheduler using celery, celery beat and celery results
 ## how to create a periodic task
 
 1. Go to periodic tasks from the admin menu
-2. Enter required fields
+2. Select process_request task from Task(Registered)
+> process_request task is the task that handles our api requests dynamically
 
 ## how to specify request for schedule
 
