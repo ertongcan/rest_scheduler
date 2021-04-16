@@ -56,7 +56,7 @@ There are tons of options to be able to schedule a periodic tasks
 1. Click + sign near interval schedule and enter your desired time of period
 2. Select created interval
 
-## How to see th task results
+## How to monitor task results
 
 - Task results page contains information about status and time of finish of the task
 - You can see the return data when you go into the result details from result data section
