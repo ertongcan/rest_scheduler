@@ -57,5 +57,5 @@ There are tons of options to be able to schedule a periodic tasks
 
 ## How to see th task results
 
-- Task results page contans information about status and time of finish of the task
+- Task results page contains information about status and time of finish of the task
 - You can see the return data when you go into the result details from result data section
