@@ -42,6 +42,9 @@ Any kind of http request can be specified from task arguments section in periodi
 
 There are tons of options to be able to schedule a periodic tasks
 
+- Besides scheduling it, it is available to be run manually when you select periodic task from the periodic task lists page and run it manually from the action dorpdown menu
+- All selected periodic tasks in schedule or manually selected will be run in parallel thats what celery offers
+
 1. Click + sign near interval schedule and enter your desired time of period
 2. Select created interval
 
